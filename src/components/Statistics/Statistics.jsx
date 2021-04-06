@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
+import './Statistics.scss';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div>
-    <h2>Statistics</h2>
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total: {total}</p>
-    <p>Positive Percentage: {positivePercentage}%</p>
+  <div className="Statistics">
+    <h2 className="Statistics__title">Statistics</h2>
+    <p className="Statistics__item">Good: {good}</p>
+    <p className="Statistics__item">Neutral: {neutral}</p>
+    <p className="Statistics__item">Bad: {bad}</p>
+    <p className="Statistics__item">Total: {total}</p>
+    <p className="Statistics__item">
+      Positive Percentage: {positivePercentage}%
+    </p>
   </div>
 );
 

@@ -1,0 +1,37 @@
+@import 'styles/shared.scss';
+
+.FeedbackOptions {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  :first-child button {
+    background-color: forestgreen;
+  }
+  :nth-child(even) button {
+    background-color: gray;
+  }
+  :last-child button {
+    background-color: red;
+  }
+}
+.FeedbackOptions__item {
+  margin-left: 40px;
+}
+
+.FeedbackOptions__button {
+  @extend %button;
+  width: 200px;
+  margin-left: auto;
+  border-radius: 4px;
+  padding: 12px 24px;
+  color: white;
+
+  &:hover,
+  &:focus {
+    // background-color: ;
+  }
+
+  &:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

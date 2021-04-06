@@ -8,7 +8,6 @@ class App extends Component {
   state = { good: 0, neutral: 0, bad: 0 };
 
   handleFeedbackLeave = event => {
-    console.log(event.currentTarget.name);
     let stateItem = event.currentTarget.name;
     this.setState(prevState => ({
       [stateItem]: prevState[stateItem] + 1,
@@ -26,8 +25,8 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     const { good, neutral, bad } = this.state;
+
     return (
       <Section>
         <FeedbackOptions
